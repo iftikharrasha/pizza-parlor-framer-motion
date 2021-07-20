@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="home container">
       <h2>
-        Welcome to Pizza Joint
+        Welcome to Pizza Parlor
       </h2>
       <Link to="/base">
         <button>
