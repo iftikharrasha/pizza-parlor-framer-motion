@@ -126,3 +126,16 @@ AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)}
 use motion.svg to animate the whole svg
 
 use pathLength: 0 or 1 to have a drawlike animation then use or motion.path
+
+
+###### loader + switching animations
+
+useCycle Hook
+
+we can use two animation and then call useCycle hook to toggle between the animations and
+
+const [anime, cycleAnime] = useCycle("animationOne", "animationTwo");
+
+onClick={() => cycleAnime()}
+
+animate={anime}
