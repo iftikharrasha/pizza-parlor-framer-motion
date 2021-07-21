@@ -32,8 +32,11 @@ const pathVariants = {
 const Header = () => {
   return (
     <header>
-      <Link to="/">
-        <div className="logo">
+        <motion.div className="logo"
+          drag
+          dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+          dragElastic={0.7}
+        >
           <motion.svg className="pizza-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
               variants={svgVariants}
               initial="start"
@@ -50,14 +53,16 @@ const Header = () => {
               variants={pathVariants}
             />
           </motion.svg>
-        </div>
-      </Link>
+        </motion.div>
         <motion.div className="title"
           initial={{ y: -250 }}
           animate={{ y: -10 }}
           transition={{ delay: 0.2, type: 'spring', stiffness: 120 }}
         >
-          <h1>Pizza Parlor</h1>
+          
+        <Link to="/">
+            <h1>Pizza Parlor</h1>
+        </Link>
         </motion.div>
     </header>
   )

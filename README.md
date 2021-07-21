@@ -1,3 +1,6 @@
+The whole playlist: https://www.youtube.com/playlist?list=PL4cUxeGkcC9iHDnQfTHEVVceOEBsOf07i
+
+
 ### `Note`
 
 motion.element
@@ -139,3 +142,19 @@ const [anime, cycleAnime] = useCycle("animationOne", "animationTwo");
 onClick={() => cycleAnime()}
 
 animate={anime}
+
+
+
+###### Dragging items
+
+How to make logo dragable? Man just add the 'drag' prop
+
+motion.div className="logo" drag
+
+right now if we drag it can be lost out of the window. How to solve? just add,
+
+dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
+
+Now, it will spring back to it's original position
+
+dragElastic={0.7} this gives how easy can we drag, the lower the hard to drag
