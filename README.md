@@ -111,3 +111,10 @@ then inside the motion.element we use an exit= {{ which tells us how to fade out
 
 Thats animating a route in 10 steps!
 
+
+###### modal
+Instead of button onClick, we can set anything false when we exit the route like this.
+
+button onClick={() => setShowModal(false)}
+
+AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)}
