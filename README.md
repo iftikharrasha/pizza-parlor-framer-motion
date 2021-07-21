@@ -118,3 +118,11 @@ Instead of button onClick, we can set anything false when we exit the route like
 button onClick={() => setShowModal(false)}
 
 AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)}
+
+
+
+###### SVG animations
+
+use motion.svg to animate the whole svg
+
+use pathLength: 0 or 1 to have a drawlike animation then use or motion.path
