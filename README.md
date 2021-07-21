@@ -94,3 +94,20 @@ what if we want to go off of the page but not so fast, like faded
 
 <AnimatePresence>Wrap up the whole conditional element here</AnimatePresence>
 then inside the motion.element we use an exit= {{ which tells us how to fade out }}
+
+
+###### animating routes
+
+1. idea starts with animate presence
+2. we need to surround switch with AnimatePresence to give it an exit presence
+3. but AnimatePresence doesn't know when our route changes we need to tell it what
+4. by useLocation hook we can do that, const location = useLocation();
+5. this tells us what our route location is and store it in location const location
+6. <Switch location={location} key={location.key}></switch> now AnimatePresence knows when it changes
+7. note if we use <Router> in App.js the useLocation wont work, we have to set <Router> it in index.js
+8. now we can go to each components page and play like a hidden and visible animation to begin within
+9. We can add an extra exit: transition: {ease: 'easeInOut'} and add exit="exit" to the motion elements
+10. make sure to add exitBeforeEnter prop in the <AnimatePresence exitBeforeEnter> or else the next route will overlap
+
+Thats animating a route in 10 steps!
+
