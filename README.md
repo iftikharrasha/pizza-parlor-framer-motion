@@ -65,3 +65,32 @@ variants={classVariants} initial="hidden" animate="visible"
 Note: the transition will be written inside visible(animate)
 Also, if we use the variant in parent, no need to write initial and animate in child
 
+
+###### keyframes
+
+scale: [1, 1.1, 1, 1.1, 1, 1.1, 1]
+
+each points represents different keyframes, we can use this array for other styles too
+
+
+###### repeated animations - continuous
+
+what if we need to use infinitely times animations?
+
+instead of using scale manually we can shorthand it by using yoyo transition
+
+scale: 1.1
+
+transition:{
+    yoyo: 10/infinity
+}
+
+10 is for 10 times or we can use infinity
+
+
+###### animation presence
+
+what if we want to go off of the page but not so fast, like faded
+
+<AnimatePresence>Wrap up the whole conditional element here</AnimatePresence>
+then inside the motion.element we use an exit= {{ which tells us how to fade out }}
